@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LapichSV</title>
+</head>
+<body>
+<p style="text-align:justify"><strong>" МЕТОДИЧЕСКИЕ УКАЗАНИЯ ПО СОЗДАНИЮ И ИСПОЛЬЗОВАНИЮ МУЛЬТИМЕДИЙНОГО ПРИЛОЖЕНИЯ"</strong></p>
+
+<p style="text-align:justify">Работа с камерой и звуком</p>
+
+<hr />
+<p style="text-align:justify">Цель задиния: Работа с мультимедиа. Создание мультимедийного приложения, позволяющего осуществлять работу с камерой и звуком(запись, воспроизведение аудио/видео файлов).Отображение полученных данных с использованием OpenGL.</p>
+
+<p style="text-align:justify">AndroidManifest.xml</p>
+<p style="text-align:justify">Файл манифеста предоставляет основную информацию о программе системы. Файл манифеста инкапсулирует всю архитектуру Android-приложения, eго функциональные возможности и конфигурацию. В процессе разработки вам придется постоянно редактировать данный файл, изменяя его структуру и дополняя новыми элементами и атрибутами.</p>
+
+<p style="text-align:justify">Hеотьемлемым атрибутом нашего приложения является камера, мы будем использовать её для записи видео!</p>
+
+<p style="text-align:justify">Для добавления возможности снимать видео при помощи нащего приложения нам нужно добавить тег uses-feature в AndroidManifest.xml.</p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\1.png" alt="картинка"></p>
+
+<p style="text-align:justify">После добавления тега для взаимодействия с камерой, мы переходим к созданию пользовательского интерфейса приложения.</p>
+
+<p style="text-align:justify">Мы описываем две кнопки взаимодействия с камерой , а именно кнопку захвата видео и воспроизведения видео.</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\2.png" alt="картинка"></p>
+
+<p style="text-align:justify">После этого мы должны имплементировать эти два метода в класс MainActivity.</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\3.png" alt="картинка"></p>
+
+<p style="text-align:justify">Описание activity_video_play.xml.</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\6.png" alt="картинка"></p>
+
+<p style="text-align:justify">Следующим действием мы должны создать Activity для воспроизведения видео VideoPlayActivity.</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\4.png" alt="картинка"></p>
+
+<p style="text-align:justify">Результат нашей работы выглядит следующим образом.</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\5.png" alt="картинка"></p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\7.png" alt="картинка"></p>
+
+<p style="text-align:justify">В приложении предусмотрен диктофон. Диктофоном мы пользуемся, когда хотим записать важную для нас информацию в аудио формате. Перейдем к созданию пользовательского интерфейса для работы с диктофоном.</p>
+
+<p style="text-align:justify">В AndroidManifest добавляем разрешение на запись звука.</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\9.png" alt="картинка"></p>
+
+<p style="text-align:justify">Интерфейс насчитывает 4 кнопки для работы с диктофоном(начало записи, конец записи, воспроизведение записи и остановка воспроизведения записи).</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\8.png" alt="картинка"></p>
+
+<p style="text-align:justify">Методы получения запроса на разрешение использования RECORD_AUDIO и рузультат выполнения запроса.</p>
+
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\12.png" alt="картинка"></p>
+
+<p style="text-align:justify">Настройка MediaRecorder.</p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\13.png" alt="картинка"></p>
+
+<p style="text-align:justify">Методом onCreate мы делаем проверку есть ли у нашего приложения доступ к микрофону.</p>
+
+<p style="text-align:justify">Обработка событий каждого нажатия кнопок.</p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\14.png" alt="картинка"></p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\15.png" alt="картинка"></p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\16.png" alt="картинка"></p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\17.png" alt="картинка"></p>
+<p style="text-align:justify">При нажатии копки Record начинается запись звука, длится до нажатия кнопки StopRecord. После сохранения записи можно прослушать её, нажав кнопку Play. Для приостановления прослушивания следует нажать кнопку StopPlay.</p>
+<p style="text-align:justify">Результат проделанной работы:</p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\10.png" alt="картинка"></p>
+<p><img src="C:\Users\Антип\Desktop\Antip_Thief\images\11.png" alt="картинка"></p>
+
+В ходе выполнения лабороторной работы было создано приложение для работы с видео и аудио. Приложение способно осуществлять запись видео и аудио и дальнейшего его сохраниение, весь функционал осуществляется через удобный интерфейс.
+
+</body>
+</html>
